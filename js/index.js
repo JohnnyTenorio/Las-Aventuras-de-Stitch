@@ -11,7 +11,7 @@ btnComenzar.addEventListener('click', () => {
 
     // Esperar 3 segundos y redirigir
     setTimeout(() => {
-      window.location.href = '/html/MenuPrincipal.html'; 
+      window.location.href = '/Las-Aventuras-de-Stitch/html/MenuPrincipal.html'; 
       // Cambia esto si tu archivo tiene otro nombre
     }, 5000);
   }, 1000); // esperar 1 segundo por la transición antes de mostrar la imagen
