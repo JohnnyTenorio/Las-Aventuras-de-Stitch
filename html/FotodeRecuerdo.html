@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foto de Recuerdo</title>
+    <link rel="stylesheet" href="../css/FotoRecuerdo.css" />
+    <link rel="shortcut icon" href="../img/FAVICOING.jfif" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="bienvenida"></h1>
+        <p>En este espacio podrás tener una foto de recuerdo para poder diseñarla. Dale click en continuar, espero que
+            lo disfrutes.</p>
+
+        <input type="file" id="inputFoto" accept="image/*" />
+
+        <div id="disenos" class="disenos hidden">
+            <h2>Elige un diseño:</h2>
+            <div class="opciones">
+                <!-- Aquí se mostrarán las opciones de diseño -->
+            </div>
+            <button id="btnGenerar" disabled>Generar</button>
+        </div>
+
+        <div id="resultado" class="resultado hidden">
+            <h2>Tu foto de recuerdo:</h2>
+            <canvas id="canvasCollage"></canvas>
+            <div class="botones-final">
+                <button id="btnRegresar">Regresar</button>
+                <button id="btnContinuar">Continuar</button>
+            </div>
+        </div>
+
+
+        <script src="../js/FotoRecuerdo.js"></script>
+</body>
+
+</html>

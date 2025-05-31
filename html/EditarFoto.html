@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Editor de Foto</title>
+    <link rel="stylesheet" href="../css/EditarFoto.css" />
+    <link rel="shortcut icon" href="../img/FAVICOING.jfif" type="image/x-icon">
+
+</head>
+
+<body>
+  <h1>Editor de Foto</h1>
+  <div class="container">
+    <canvas id="canvasEditor" width="600" height="360"></canvas>
+
+    <div class="controls">
+        <input type="text" id="inputTexto" placeholder="Agregar texto..." />
+        <input type="color" id="inputColor" value="#000000" title="Color del texto" />
+        <input type="number" id="inputTamaño" min="10" max="100" value="24" title="Tamaño del texto" />
+        <button id="btnAgregarTexto">Agregar Texto</button>
+        <button id="btnDescargar">Descargar Imagen</button>
+    </div>
+
+    <div id="textList"></div>
+  </div>
+
+<div id="stitchTransition">
+  <img src="../img/stitch_800x600_7c896288.png" alt="Transición Stitch" style="max-width: 300px;">
+  <div id="countdown" style="color: white; font-size: 48px; font-weight: 700; margin-top: 20px;"></div>
+</div>
+
+
+  <script src="../js/EditarFoto.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --stitch-blue: #0082c9;
+    --stitch-light-blue: #aee6ff;
+    --stitch-dark: #023e8a;
+    --stitch-pink: #ffc0cb;
+    --stitch-white: #ffffff;
+    --stitch-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, var(--stitch-light-blue), var(--stitch-pink));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: var(--stitch-white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px var(--stitch-shadow);
+    text-align: center;
+}
+
+/* Diseño oculto */
+.hidden {
+    display: none;
+}
+
+/* Sección de opciones */
+.disenos {
+    margin-top: 25px;
+}
+
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.opciones label {
+    cursor: pointer;
+    padding: 10px;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px var(--stitch-shadow);
+    transition: all 0.3s ease;
+}
+
+.opciones label.selected {
+    border-color: var(--stitch-blue);
+    transform: scale(1.05);
+}
+
+.opciones canvas {
+    display: block;
+    margin-top: 8px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Botones finales */
+.resultado {
+    margin-top: 30px;
+}
+
+.botones-final {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background-color: var(--stitch-dark);
+    color: var(--stitch-white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px var(--stitch-shadow);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--stitch-blue);
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 15px;
+}
+
+.modal-content {
+    background: var(--stitch-white);
+    padding: 25px;
+    border-radius: 16px;
+    max-width: 960px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.editor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Canvas Editor */
+#canvasEditor {
+    border: 2px solid var(--stitch-dark);
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px var(--stitch-shadow);
+    max-width: 100%;
+}
+
+/* Panel de stickers */
+.stickersPanel {
+    width: 230px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-left: 3px solid var(--stitch-blue);
+    padding-left: 15px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+}
+
+.stickersPanel h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: var(--stitch-dark);
+    text-align: center;
+}
+
+#stickersList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#stickersList img {
+    width: 80px;
+    margin-bottom: 12px;
+    cursor: grab;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+#stickersList img:hover {
+    border-color: var(--stitch-blue);
+    transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .editor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stickersPanel {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid var(--stitch-blue);
+        padding-top: 15px;
+    }
+
+    .opciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botones-final {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 90%;
+    }
+}

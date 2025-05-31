@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --stitch-blue: #007bff;
+  --stitch-light-blue: #89cff0;
+  --stitch-dark: #023e8a;
+  --stitch-pink: #ffb6c1;
+  --stitch-white: #ffffff;
+  --stitch-shadow: rgba(0, 0, 0, 0.15);
+  --stitch-gradient: linear-gradient(135deg, #89cff0 0%, #ffb6c1 100%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--stitch-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--stitch-dark);
+}
+
+.container {
+  max-width: 700px;
+  width: 90%;
+  padding: 20px;
+  background: var(--stitch-white);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px var(--stitch-shadow);
+  text-align: center;
+  position: relative;
+}
+
+.card {
+  padding: 20px 30px;
+}
+
+.stitch-img {
+  width: 160px;
+  margin-bottom: 0px;
+  user-select: none;
+  filter: drop-shadow(0 0 10px var(--stitch-light-blue));
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1px;
+  color: var(--stitch-dark);
+  text-shadow: 1px 1px 4px var(--stitch-light-blue);
+}
+
+h1 span {
+  color: var(--stitch-pink);
+  text-shadow: 2px 2px 5px var(--stitch-dark);
+}
+
+.mensaje-principal {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: var(--stitch-dark);
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: var(--stitch-dark);
+}
+
+.mensaje-secundario {
+  font-style: italic;
+  color: var(--stitch-dark);
+  font-weight: 500;
+}
+
+button {
+  background: var(--stitch-dark);
+  color: var(--stitch-white);
+  border: none;
+  padding: 15px 45px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(2, 62, 138, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--stitch-blue);
+  transform: scale(1.05);
+}
+
+#stitchTransition {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 255, 0.85);
+  z-index: 9999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px black;
+}
+
+#stitchTransition img {
+  width: 220px;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+#stitchTransition div {
+  font-size: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .mensaje-principal {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px 0;
+  }
+}

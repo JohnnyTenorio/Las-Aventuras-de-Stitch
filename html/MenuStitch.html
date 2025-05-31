@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu Stitch - Quiz</title>
+    <link rel="shortcut icon" href="../img/FAVICOING.jfif" type="image/x-icon">
+    <link rel="stylesheet" href="../css/MenuStitch.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="tituloNombre"></h1>
+        <img src="../img/stitch_800x600_7c896288.png" alt="Stitch Azul" class="imagen-stitch" />
+        <p class="intro-text">Vamos a ver si sabes de Stitch</p>
+        <button id="btnComenzar">Comenzar</button>
+
+        <div id="quizContainer" class="quiz-container hidden">
+            <div id="timer">Tiempo restante: 60 segundos</div>
+            <div id="pregunta"></div>
+            <img id="imagenPregunta" class="imagen-pregunta" src="" alt="Imagen de la pregunta">
+            <div id="opciones"></div>
+            <button id="btnSiguiente" class="hidden">Siguiente</button>
+        </div>
+
+        <div id="resultadoContainer" class="resultado-container hidden">
+            <h2>¡Felicidades <span id="nombreResultado"></span>! Terminaste el quiz.</h2>
+            <table id="tablaResultados">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Pregunta</th>
+                        <th>Tu respuesta</th>
+                        <th>Correcta</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p id="puntajeFinal"></p>
+            <button id="btnReintentar">¿Quieres intentarlo otra vez?</button>
+            <button id="btnContinuar">Continuar</button>
+        </div>
+    </div>
+
+    <div id="transicionStitch">
+        <img src="../img/stitch_800x600_7c896288.png" alt="Stitch" />
+    </div>
+    <audio id="audioFondo" src="../img/FondoMusic.mp3" loop></audio>
+
+    <script src="../js/MenuStitch.js" defer></script>
+</body>
+
+</html>
